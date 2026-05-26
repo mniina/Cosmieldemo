@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <g transform="translate(100, 88)" fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- 8 cosmos petals — each slightly varied for hand-drawn feel -->
+    <g stroke-width="1.1" fill="rgba(30,30,30,0.04)">
+      <path d="M-1,-8 C-11,-19 -11,-39 -5,-48 C-2,-53 2,-53 5,-48 C11,-39 10,-20 1,-8"/>
+      <path d="M-1,-8 C-10,-20 -12,-38 -5,-47 C-2,-53 3,-52 5,-48 C11,-38 10,-19 1,-8" transform="rotate(45)"/>
+      <path d="M-1,-8 C-12,-18 -10,-40 -5,-48 C-2,-53 2,-53 6,-47 C11,-39 11,-19 1,-8" transform="rotate(90)"/>
+      <path d="M-1,-8 C-10,-19 -11,-38 -4,-48 C-2,-53 2,-53 5,-48 C10,-39 11,-20 1,-8" transform="rotate(135)"/>
+      <path d="M-1,-8 C-11,-20 -10,-39 -5,-48 C-2,-53 2,-52 5,-48 C11,-38 10,-19 1,-8" transform="rotate(180)"/>
+      <path d="M-1,-8 C-10,-19 -12,-39 -5,-47 C-2,-53 3,-53 5,-48 C10,-39 10,-20 1,-8" transform="rotate(225)"/>
+      <path d="M-1,-8 C-11,-19 -10,-40 -5,-48 C-2,-53 2,-53 6,-47 C11,-39 11,-18 1,-8" transform="rotate(270)"/>
+      <path d="M-1,-8 C-10,-20 -11,-38 -4,-48 C-2,-53 2,-52 5,-48 C11,-39 10,-19 1,-8" transform="rotate(315)"/>
+    </g>
+
+    <!-- Center -->
+    <circle r="7.5" stroke-width="1" fill="rgba(30,30,30,0.05)"/>
+    <circle cx="0" cy="-4.5" r="1.1" fill="#1e1e1e" stroke="none"/>
+    <circle cx="4" cy="-2" r="1.1" fill="#1e1e1e" stroke="none"/>
+    <circle cx="4" cy="2.5" r="1.1" fill="#1e1e1e" stroke="none"/>
+    <circle cx="0" cy="4.5" r="1.1" fill="#1e1e1e" stroke="none"/>
+    <circle cx="-4" cy="2.5" r="1.1" fill="#1e1e1e" stroke="none"/>
+    <circle cx="-4" cy="-2" r="1.1" fill="#1e1e1e" stroke="none"/>
+  </g>
+
+  <!-- Stem -->
+  <path d="M100,116 C99,124 101,133 100,148" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Small leaf -->
+  <path d="M100,134 C95,129 89,126 86,121" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Brand name -->
+  <text x="100" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#1e1e1e" letter-spacing="5">C&#xD3;SMIEL</text>
+  <text x="100" y="186" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="rgba(30,30,30,0.5)" letter-spacing="3.5">Ikebana Arts</text>
+</svg>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Ikebana Workshop — Cosmiel</title>
+  <link rel="stylesheet" href="workshop.css" />
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="logo.svg" alt="Cosmiel logo" class="logo" />
+    </a>
+    <nav>
+      <a href="workshop.html">← Back to Workshop</a>
+    </nav>
+  </header>
+
+  <main class="register-page">
+    <div class="register-container">
+
+      <div class="register-info">
+        <p class="eyebrow">Sogetsu Ikebana Workshop</p>
+        <h1>Reserve Your Spot</h1>
+        <p class="register-sub">Fill in your details, then complete payment via PayPal to confirm your registration. Your spot is only held once payment is received.</p>
+
+        <div class="summary-card">
+          <div class="summary-row">
+            <span>Date</span>
+            <span>TBD</span>
+          </div>
+          <div class="summary-row">
+            <span>Location</span>
+            <span>College Park, MD (TBD)</span>
+          </div>
+          <div class="summary-row">
+            <span>Duration</span>
+            <span>2 hours</span>
+          </div>
+          <div class="summary-row">
+            <span>Includes</span>
+            <span>Seasonal flowers, brass kenzan, polaroid memento</span>
+          </div>
+          <div class="summary-row total">
+            <span>Materials fee</span>
+            <span>$40</span>
+          </div>
+        </div>
+
+        <p class="refund-note">All sales are final. Refunds are not available once payment is received.</p>
+      </div>
+
+      <div class="register-form-wrap">
+        <form id="register-form" onsubmit="handleSubmit(event)">
+          <h2>Your Information</h2>
+
+          <div class="field">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" required placeholder="Your first name" />
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Your last name" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            <span class="field-hint">We'll send workshop details to this address.</span>
+          </div>
+
+          <div class="field checkbox-field">
+            <input type="checkbox" id="age-confirm" name="age-confirm" required />
+            <label for="age-confirm">I confirm that I am 18 years of age or older.</label>
+          </div>
+
+          <div class="field checkbox-field">
+            <input type="checkbox" id="refund-confirm" name="refund-confirm" required />
+            <label for="refund-confirm">I understand that all sales are final and no refunds will be issued.</label>
+          </div>
+
+          <div class="field checkbox-field">
+            <input type="checkbox" id="bring-confirm" name="bring-confirm" required />
+            <label for="bring-confirm">I will bring my own low, wide container (8–11" wide, 2.5"+ deep) and sharp flower scissors or garden secateurs.</label>
+          </div>
+
+          <div class="paypal-section">
+            <p class="paypal-label">Complete payment to confirm your spot:</p>
+            <!-- Replace action email with your PayPal email when ready -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-form">
+              <input type="hidden" name="cmd" value="_xclick" />
+              <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
+              <input type="hidden" name="item_name" value="Ikebana Workshop — Cosmiel" />
+              <input type="hidden" name="amount" value="40.00" />
+              <input type="hidden" name="currency_code" value="USD" />
+              <input type="hidden" name="return" value="confirmation.html" />
+              <input type="hidden" name="no_shipping" value="1" />
+              <button type="submit" class="paypal-btn" id="paypal-btn" disabled>
+                Pay $40 via PayPal
+              </button>
+            </form>
+            <p class="paypal-hint">Fill in all fields above to unlock payment.</p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <img src="logo.svg" alt="Cosmiel" class="footer-logo" />
+    <p>© 2026 Cosmiel · College Park, Maryland</p>
+    <a href="https://instagram.com/cos.miel" target="_blank">@cos.miel</a>
+  </footer>
+
+  <script>
+    const form = document.getElementById("register-form");
+    const paypalBtn = document.getElementById("paypal-btn");
+    const hint = document.querySelector(".paypal-hint");
+
+    function checkFormReady() {
+      const allFilled =
+        form["first-name"].value.trim() &&
+        form["last-name"].value.trim() &&
+        form["email"].value.trim() &&
+        form["age-confirm"].checked &&
+        form["refund-confirm"].checked &&
+        form["bring-confirm"].checked;
+
+      paypalBtn.disabled = !allFilled;
+      hint.style.display = allFilled ? "none" : "block";
+    }
+
+    form.addEventListener("input", checkFormReady);
+    form.addEventListener("change", checkFormReady);
+
+    function handleSubmit(e) {
+      e.preventDefault();
+    }
+  </script>
+
+</body>
+</html>

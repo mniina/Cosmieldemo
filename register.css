@@ -1,0 +1,207 @@
+.register-page {
+  min-height: calc(100vh - 80px);
+  padding: 4rem 2.5rem;
+  background: var(--cream);
+}
+
+.register-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.register-info h1 {
+  margin-bottom: 1rem;
+}
+
+.register-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  max-width: 380px;
+}
+
+.summary-card {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  font-family: -apple-system, sans-serif;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span:first-child {
+  color: var(--muted);
+}
+
+.summary-row span:last-child {
+  color: var(--text);
+  text-align: right;
+  max-width: 200px;
+}
+
+.summary-row.total {
+  background: var(--warm-white);
+  font-weight: 600;
+}
+
+.summary-row.total span:last-child {
+  color: var(--bark);
+  font-size: 1.1rem;
+}
+
+/* FORM */
+.register-form-wrap {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 2.5rem;
+}
+
+.register-form-wrap h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.field input[type="text"],
+.field input[type="email"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-family: Georgia, serif;
+  color: var(--text);
+  background: var(--cream);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: var(--gold);
+}
+
+.field-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+.checkbox-field {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-field label {
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.5;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* PAYPAL */
+.paypal-section {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
+}
+
+.paypal-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: -apple-system, sans-serif;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.paypal-btn {
+  width: 100%;
+  background: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-family: -apple-system, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.paypal-btn:hover:not(:disabled) {
+  background: #005ea6;
+}
+
+.paypal-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.paypal-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0;
+  }
+
+  .register-page {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .register-form-wrap {
+    padding: 1.5rem;
+  }
+}
