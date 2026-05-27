@@ -349,18 +349,19 @@ h2 {
 
 .materials-list li {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: flex-start;
 }
 
-.dot {
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  margin-top: 0.65rem;
+.material-icon {
   flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  color: var(--gold);
+}
+
+.dot {
+  display: none;
 }
 
 .materials-list strong {
