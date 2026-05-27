@@ -429,6 +429,17 @@ h2 {
   white-space: nowrap;
 }
 
+.suiban-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: var(--gold) !important;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--gold) !important;
+  padding-bottom: 1px;
+}
+
 /* INSTRUCTOR */
 .instructor-card {
   background: var(--cream);
