@@ -461,6 +461,12 @@ h2 {
   line-height: 1.7;
 }
 
+.instructor-card a {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+}
+
 .instagram-link {
   font-size: 0.8rem;
   letter-spacing: 0.1em;
