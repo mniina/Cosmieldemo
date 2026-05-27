@@ -274,6 +274,13 @@ h2 {
   font-size: 1.05rem;
 }
 
+.about a {
+  color: var(--gold);
+  font-weight: bold;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+}
+
 /* DETAILS GRID */
 .details {
   background: var(--warm-white);
