@@ -419,6 +419,16 @@ h2 {
   font-family: -apple-system, sans-serif;
 }
 
+.bring-list a {
+  color: var(--gold);
+  font-family: -apple-system, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+
 /* INSTRUCTOR */
 .instructor-card {
   background: var(--cream);
