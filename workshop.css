@@ -281,6 +281,12 @@ h2 {
   padding-bottom: 1px;
 }
 
+.kanji {
+  font-size: 1.2em;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
 /* DETAILS GRID */
 .details {
   background: var(--warm-white);
