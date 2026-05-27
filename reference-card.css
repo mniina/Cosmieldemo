@@ -1,0 +1,366 @@
+:root {
+  --cream: #ffffff;
+  --warm-white: #f7f5f1;
+  --gold: #e8622a;
+  --gold-light: #f0845a;
+  --text: #1e1e1e;
+  --muted: #8a8580;
+  --border: #e4e0da;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #d8d4ce;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* SCREEN CONTROLS */
+.screen-controls {
+  text-align: center;
+  padding: 1.5rem;
+  font-family: -apple-system, sans-serif;
+}
+
+.screen-controls button {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 1px;
+  font-family: -apple-system, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.screen-controls button:hover {
+  background: var(--gold-light);
+}
+
+.screen-controls p {
+  font-size: 0.75rem;
+  color: #7a7670;
+}
+
+/* CARD PAGE */
+.card-page {
+  width: 8.5in;
+  min-height: 11in;
+  background: var(--cream);
+  margin: 1.5rem auto;
+  padding: 0.65in 0.75in;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+}
+
+/* HEADER */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1.5px solid var(--text);
+  margin-bottom: 0.95rem;
+}
+
+.card-logo {
+  height: 48px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.card-eyebrow {
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--gold);
+  margin-bottom: 0.1rem;
+}
+
+.card-subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--text);
+}
+
+.card-header-rule {
+  flex: 1;
+}
+
+.card-side-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--muted);
+}
+
+/* BODY */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rule {
+  height: 1px;
+  background: var(--border);
+  margin: 0.8rem 0;
+}
+
+/* SECTIONS */
+.card-section {
+  /* no extra margin — rule handles spacing */
+}
+
+.section-heading {
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--gold);
+  font-weight: normal;
+  margin-bottom: 0.55rem;
+}
+
+.section-intro {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+
+.card-section p {
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.card-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* PRINCIPLE QUOTE */
+.principle {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  border-left: 2px solid var(--gold);
+  padding: 0.35rem 0 0.35rem 0.85rem;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.45;
+}
+
+/* KANJI */
+.kanji-inline {
+  color: var(--gold);
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", Georgia, serif;
+}
+
+/* MA SECTION */
+.ma-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.kanji-large {
+  font-size: 4rem;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", Georgia, serif;
+  margin-top: -0.1rem;
+}
+
+/* MORIBANA NOTE */
+.moribana-note {
+  margin-top: 0.55rem;
+  background: var(--warm-white);
+  border-left: 2px solid var(--border);
+  padding: 0.45rem 0.7rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  line-height: 1.55;
+}
+
+.moribana-note strong {
+  color: var(--text);
+}
+
+/* STEMS LAYOUT */
+.stems-layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.stems-diagram {
+  flex-shrink: 0;
+  width: 130px;
+  position: relative;
+}
+
+.stems-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diagram-proportions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  gap: 0;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.55rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.diagram-proportions span {
+  position: absolute;
+}
+
+.diagram-proportions span:nth-child(1) { top: 6%; }
+.diagram-proportions span:nth-child(2) { top: 28%; }
+.diagram-proportions span:nth-child(3) { top: 50%; }
+
+.stems-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.stem-item {
+  padding: 0.35rem 0;
+}
+
+.stem-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.stem-name {
+  font-family: -apple-system, sans-serif;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em;
+  color: var(--text) !important;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem !important;
+}
+
+.stem-role {
+  font-weight: normal;
+  color: var(--muted);
+  text-transform: none;
+  font-size: 0.67rem;
+  letter-spacing: 0.02em;
+}
+
+.stem-item p:not(.stem-name) {
+  font-size: 0.78rem !important;
+  color: var(--muted) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* RULES LIST */
+.rules-list {
+  list-style: none;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rules-list li {
+  font-size: 0.82rem;
+  color: var(--text);
+  padding-left: 1.1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.rules-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* FOOTER */
+.card-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 0.55rem;
+  margin-top: 0.9rem;
+  text-align: center;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-handle {
+  color: var(--gold);
+}
+
+.footer-dot {
+  color: var(--border);
+}
+
+/* PRINT */
+@media print {
+  body {
+    background: white;
+  }
+
+  .screen-controls {
+    display: none;
+  }
+
+  .card-page {
+    width: 100%;
+    min-height: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0.65in 0.75in;
+    box-shadow: none;
+    page-break-after: always;
+  }
+
+  .card-page.back {
+    page-break-after: avoid;
+  }
+
+  @page {
+    size: letter;
+    margin: 0;
+  }
+}
