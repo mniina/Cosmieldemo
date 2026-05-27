@@ -24,7 +24,7 @@
       <div class="register-info">
         <p class="eyebrow">Sogetsu Ikebana Workshop</p>
         <h1>Reserve Your Spot</h1>
-        <p class="register-sub">Fill in your details, then complete payment via PayPal to confirm your registration. Your spot is only held once payment is received.</p>
+        <p class="register-sub">Fill in your details, then complete payment via Venmo or Zelle. Spots are confirmed on a first-paid, first-served basis. You will receive a confirmation email from <strong>cosmielstudio@gmail.com</strong> once your payment is verified — you are not registered until you receive that email.</p>
 
         <div class="summary-card">
           <div class="summary-row">
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <p class="refund-note">All sales are final. Refunds are not available once payment is received.</p>
+        <p class="refund-note">This workshop is limited to 12 participants. If the workshop is at capacity when you register, you will be contacted within 24 hours and fully refunded. All other sales are final.</p>
       </div>
 
       <div class="register-form-wrap">
@@ -87,22 +87,21 @@
             <label for="bring-confirm">I will bring my own low, wide container (8–11" wide, 2.5"+ deep), sharp flower scissors or garden secateurs, and a small hand towel.</label>
           </div>
 
-          <div class="paypal-section">
-            <p class="paypal-label">Complete payment to confirm your spot:</p>
-            <!-- Replace action email with your PayPal email when ready -->
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-form">
-              <input type="hidden" name="cmd" value="_xclick" />
-              <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
-              <input type="hidden" name="item_name" value="Ikebana Workshop — Cosmiel" />
-              <input type="hidden" name="amount" value="55.00" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="return" value="confirmation.html" />
-              <input type="hidden" name="no_shipping" value="1" />
-              <button type="submit" class="paypal-btn" id="paypal-btn" disabled>
-                Pay $55 via PayPal
-              </button>
-            </form>
-            <p class="paypal-hint">Fill in all fields above to unlock payment.</p>
+          <div class="payment-section">
+            <p class="payment-label">Step 2 — Send $55 using one of the options below:</p>
+            <div class="payment-options">
+              <div class="payment-option">
+                <p class="payment-method">Venmo</p>
+                <p class="payment-handle">@Mai-Niina</p>
+                <p class="payment-note">Include your full name in the payment note.</p>
+              </div>
+              <div class="payment-option">
+                <p class="payment-method">Zelle</p>
+                <p class="payment-handle">mniina@gmail.com</p>
+                <p class="payment-note">Or send to 706-987-9967. Include your full name.</p>
+              </div>
+            </div>
+            <p class="payment-confirm-note">You will receive a confirmation email from cosmielstudio@gmail.com within 24 hours once your payment is verified. If the workshop is at capacity, you will be fully refunded.</p>
           </div>
 
         </form>
@@ -124,26 +123,6 @@
   </footer>
 
   <script>
-    const form = document.getElementById("register-form");
-    const paypalBtn = document.getElementById("paypal-btn");
-    const hint = document.querySelector(".paypal-hint");
-
-    function checkFormReady() {
-      const allFilled =
-        form["first-name"].value.trim() &&
-        form["last-name"].value.trim() &&
-        form["email"].value.trim() &&
-        form["age-confirm"].checked &&
-        form["refund-confirm"].checked &&
-        form["bring-confirm"].checked;
-
-      paypalBtn.disabled = !allFilled;
-      hint.style.display = allFilled ? "none" : "block";
-    }
-
-    form.addEventListener("input", checkFormReady);
-    form.addEventListener("change", checkFormReady);
-
     function handleSubmit(e) {
       e.preventDefault();
     }

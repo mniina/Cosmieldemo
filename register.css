@@ -158,36 +158,66 @@
   margin-bottom: 1rem;
 }
 
-.paypal-btn {
-  width: 100%;
-  background: #0070ba;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.9rem;
-  font-size: 1rem;
-  font-family: -apple-system, sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, opacity 0.2s;
-  letter-spacing: 0.02em;
+.payment-section {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
 }
 
-.paypal-btn:hover:not(:disabled) {
-  background: #005ea6;
-}
-
-.paypal-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.paypal-hint {
+.payment-label {
   font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: -apple-system, sans-serif;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.payment-option {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: 2px;
+}
+
+.payment-method {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: -apple-system, sans-serif;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.payment-handle {
+  font-size: 1.1rem;
+  font-family: -apple-system, sans-serif;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.payment-note {
+  font-size: 0.78rem;
   color: var(--muted);
   font-family: -apple-system, sans-serif;
-  text-align: center;
-  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+.payment-confirm-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
 }
 
 @media (max-width: 768px) {
