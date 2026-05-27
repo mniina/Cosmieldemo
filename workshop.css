@@ -490,6 +490,74 @@ h2 {
   padding-bottom: 1px;
 }
 
+/* COMING SOON */
+.coming-soon {
+  background: var(--warm-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.coming-soon-sub {
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  font-size: 0.95rem;
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.coming-soon-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 2px;
+}
+
+.coming-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1px;
+  margin-bottom: 0.85rem;
+}
+
+.coming-soon-card h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.coming-soon-follow {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: -apple-system, sans-serif;
+}
+
+.coming-soon-follow a {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+}
+
 /* CTA */
 .cta-section {
   background: var(--gold);
